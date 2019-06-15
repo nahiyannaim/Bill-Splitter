@@ -16,24 +16,65 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     
-    <title> Bill Splitter </title>
+    <title> Split It </title>
 </head>
 
 <body>
     
-    <h1 class="display-4"> Bill Splitter </h1>
+    <h1 class="display-4"> Split It </h1>
+
+    <p class="lead"> Bill splitting, made easy. </p>
     
-    <p class="lead"> Splitting, made easy! </p>
-    
-    <h3>Total Bill $: </h3>
+   
+    <form>
 
-    <h3>Number of People: </h3>
+        <div class="form-group row">
+            <h3 for="totalBill" class="col-sm-2 col-form">Total Bill: </h3>
+            <div class="col-sm-2">
+                <input type="number" class="form-control" id="totalBill" placeholder="$">
+            </div>
+        </div>
 
-    <h3>Tax Percentage: </h3>
+        <div class="form-group row">
+            <h3 for="numPeople" class="col-sm-2 col-form"> Number of People: </h3>
+            <div class="col-sm-2">
+                <input type="number" class="form-control" id="numPeople" placeholder="E.g. 5">
+            </div>
+        </div>
 
-    <h3>Tip % / $: </h3>
+        <div class="form-group row">
+            <h3 for="tax" class="col-sm-2 col-form"> Tax Percentage: </h3>
+            <div class="col-sm-2">
+                <input type="number" class="form-control" id="tax" placeholder="E.g. 13 for MB">
+            </div>
+        </div>
 
-    <button type="button" class="btn btn-primary" > Split </button>
+        <div class="form-group row">
+
+            <h3 for="tip" class="col-sm-2 col-form"> Tip:  </h3>
+
+            <div class="input-group mb-3 col-sm-2">
+
+                <div class="input-group-prepend">
+                    
+                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Type</button>
+                    
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">In dollars ($)</a>
+                        <a class="dropdown-item" href="#">In percentage (%)</a>
+                    </div>
+                    
+                </div>
+
+                <input type="number" class="form-control" id="tip" placeholder="E.g. 4">
+            
+            </div>
+
+        </div>
+      
+        <button type="submit" class="btn btn-primary" > Split </button>
+
+    </form>
 
 </body>
 
