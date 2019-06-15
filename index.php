@@ -21,9 +21,10 @@
 
 <body>
     
-    <h1 class="display-4"> Split It </h1>
-
-    <p class="lead"> Bill splitting, made easy. </p>
+    <div class="header">
+        <h1 class="display-4"> Split It </h1>
+        <p class="lead"> Bill splitting, made easy. </p>
+    </div>
     
    
     <form>
@@ -72,7 +73,7 @@
 
         </div>
       
-        <button type="submit" class="btn btn-primary" > Split </button>
+        <button type="submit" class="btn btn-primary split-button" > Split </button>
 
     </form>
 
