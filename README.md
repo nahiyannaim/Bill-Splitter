@@ -1,1 +1,4 @@
-# Bill-Splitter
+# Split It
+## Bill splitting, made easy.
+
+
