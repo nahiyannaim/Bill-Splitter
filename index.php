@@ -1,5 +1,15 @@
 <?php
-    // Do backend calculation
+
+$total = (double)$_POST["totalBill"];
+$numPeople = (double)$_POST["numPeople"];
+$tax = (double)$_POST["tax"];
+$tip = (double)$_POST["tip"];
+
+if($numPeople > 0) // Avoiding division by zero when form is empty when app is launched
+{
+    $result = ( $total * (($tax/100) + 1) + $tip ) / $numPeople ;
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -21,61 +31,70 @@
 
 <body>
     
-    <div class="header">
-        <h1 class="display-4"> Split It </h1>
-        <p class="lead"> Bill splitting, made easy. </p>
-    </div>
+  <div class="main">
+
+        <div class="header">
+            <h1 class="display-4"> Split It </h1>
+            <p class="lead"> Bill splitting, made easy. </p>
+        </div>
+        
     
-   
-    <form>
+        <form class="form" action="" method="post">
 
-        <div class="form-group row">
-            <h3 for="totalBill" class="col-sm-2 col-form">Total Bill: </h3>
-            <div class="col-sm-2">
-                <input type="number" class="form-control" id="totalBill" placeholder="$">
+            <div class="form-group row">
+                <h3 for="totalBill" class="col-sm-2 col-form">Total Bill: </h3>
+                <div class="col-sm-2">
+                    <input type="number" name="totalBill" class="form-control" id="totalBill" placeholder="$">
+                </div>
             </div>
-        </div>
 
-        <div class="form-group row">
-            <h3 for="numPeople" class="col-sm-2 col-form"> Number of People: </h3>
-            <div class="col-sm-2">
-                <input type="number" class="form-control" id="numPeople" placeholder="E.g. 5">
+            <div class="form-group row">
+                <h3 for="numPeople" class="col-sm-2 col-form"> Number of People: </h3>
+                <div class="col-sm-2">
+                    <input type="number" name="numPeople" class="form-control" id="numPeople" placeholder="E.g. 5">
+                </div>
             </div>
-        </div>
 
-        <div class="form-group row">
-            <h3 for="tax" class="col-sm-2 col-form"> Tax Percentage: </h3>
-            <div class="col-sm-2">
-                <input type="number" class="form-control" id="tax" placeholder="E.g. 13 for MB">
+            <div class="form-group row">
+                <h3 for="tax" class="col-sm-2 col-form"> Tax Percentage: </h3>
+                <div class="col-sm-2">
+                    <input type="number" name="tax" class="form-control" id="tax" placeholder="E.g. 13 for MB">
+                </div>
             </div>
-        </div>
 
-        <div class="form-group row">
+            <div class="form-group row">
 
-            <h3 for="tip" class="col-sm-2 col-form"> Tip:  </h3>
+                <h3 for="tip" class="col-sm-2 col-form"> Tip:  </h3>
 
-            <div class="input-group mb-3 col-sm-2">
+                <div class="input-group mb-3 col-sm-2">
 
-                <div class="input-group-prepend">
-                    
-                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Type</button>
-                    
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">In dollars ($)</a>
-                        <a class="dropdown-item" href="#">In percentage (%)</a>
+                    <div class="input-group-prepend">
+                        
+                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Type</button>
+                        
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">In dollars ($)</a>
+                            <a class="dropdown-item" href="#">In percentage (%)</a>
+                        </div>
+                        
                     </div>
-                    
+
+                    <input type="number" name="tip" class="form-control" id="tip" placeholder="E.g. 4">
+                
                 </div>
 
-                <input type="number" class="form-control" id="tip" placeholder="E.g. 4">
-            
             </div>
+        
+            <button type="submit" class="btn btn-primary split-button" > Split </button>
 
+        </form>
+
+        
+        <div class="result">
+            <h3> $<?= round($result, 1); ?> per person </h3>  
         </div>
-      
-        <button type="submit" class="btn btn-primary split-button" > Split </button>
 
-    </form>
+  </div>
 
 </body>
 
