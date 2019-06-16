@@ -30,12 +30,14 @@ if($numPeople > 0) // Avoiding division by zero when form is empty when app is l
 </head>
 
 <body>
-    
+
   <div class="main">
 
         <div class="header">
-            <h1 class="display-4"> Split It </h1>
-            <p class="lead"> Bill splitting, made easy. </p>
+            <a href="index.php"> 
+                <h1 class="display-4"> Split It </h1>
+                <p class="lead"> Bill splitting, made easy. </p> 
+            </a> 
         </div>
         
     
@@ -44,21 +46,23 @@ if($numPeople > 0) // Avoiding division by zero when form is empty when app is l
             <div class="form-group row">
                 <h3 for="totalBill" class="col-sm-2 col-form">Total Bill: </h3>
                 <div class="col-sm-2">
-                    <input type="number" name="totalBill" class="form-control" id="totalBill" placeholder="$">
+                    <input type="number" name="totalBill" class="form-control" id="totalBill" value=<?= $_POST["totalBill"] ?> placeholder="$">
                 </div>
             </div>
 
             <div class="form-group row">
                 <h3 for="numPeople" class="col-sm-2 col-form"> Number of People: </h3>
                 <div class="col-sm-2">
-                    <input type="number" name="numPeople" class="form-control" id="numPeople" placeholder="E.g. 5">
+                    <input type="number" name="numPeople" class="form-control" id="numPeople" value=<?= $_POST["numPeople"] ?> placeholder="E.g. 5">
+                    <!-- <em>E.g. 5</em> -->
                 </div>
             </div>
 
             <div class="form-group row">
                 <h3 for="tax" class="col-sm-2 col-form"> Tax Percentage: </h3>
                 <div class="col-sm-2">
-                    <input type="number" name="tax" class="form-control" id="tax" placeholder="E.g. 13 for MB">
+                    <input type="number" name="tax" class="form-control" id="tax" value=<?= $_POST["tax"] ?> placeholder="E.g. 13 for MB">
+                    <!-- <em>E.g. 13 for MB</em> -->
                 </div>
             </div>
 
@@ -79,7 +83,7 @@ if($numPeople > 0) // Avoiding division by zero when form is empty when app is l
                         
                     </div>
 
-                    <input type="number" name="tip" class="form-control" id="tip" placeholder="E.g. 4">
+                    <input type="number" name="tip" class="form-control" id="tip" value=<?= $_POST["tip"] ?> placeholder="E.g. 4">
                 
                 </div>
 
@@ -95,6 +99,17 @@ if($numPeople > 0) // Avoiding division by zero when form is empty when app is l
         </div>
 
   </div>
+
+
+<!-- To disable resubmission of form when refresh is clicked
+<script>
+    if (window.history.replaceState) 
+    {
+        window.history.replaceState(null, null, window.location.href);
+    }
+</script> 
+-->
+
 
 </body>
 
