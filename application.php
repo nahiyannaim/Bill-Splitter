@@ -22,13 +22,13 @@ class Application
 
         if($this->numPeople > 0) // Avoiding division by zero when form is empty when app is launched
         {
-            if($this->tipType == 'dollars')
-            {
-                $result = ( $this->total * (($this->tax/100) + 1) + $this->tip ) / $this->numPeople ;
-            }
-            else // tip is percentage
+            if($this->tipType === 'percentage')
             {
                 $result = ( $this->total * (($this->tax/100) + 1) + $this->total * (($this->tip/100) + 1) ) / $this->numPeople ;
+            }
+            else // Tip is in dollars, also default when user doesn't select anything in dropdown and just enters amount
+            {
+                $result = ( $this->total * (($this->tax/100) + 1) + $this->tip ) / $this->numPeople ;
             }
         }
 

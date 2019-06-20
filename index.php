@@ -1,7 +1,6 @@
 <?php
 
 include 'application.php';
-
 $app = new Application; 
 
 ?>
@@ -34,7 +33,6 @@ $app = new Application;
                 <p class="lead"> Bill splitting, made easy. </p> 
             </a> 
         </div>
-        
     
         <form class="form" action="" method="post">
 
@@ -66,20 +64,11 @@ $app = new Application;
                 <h3 for="tip" class="col-sm-2 col-form"> Tip:  </h3>
 
                 <div class="input-group mb-3 col-sm-2">
-
-                    <div class="input-group-prepend">
-                        
-                        <!-- <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Type</button> -->
-                        
-                        <!-- <div class="dropdown-menu"> -->
-                            <!-- <a class="dropdown-item" href="#">In dollars ($)</a>
-                            <a class="dropdown-item" href="#">In percentage (%)</a> -->
-                            <select name="tipType" id="tipType">
-                                <option value="dollars"> In dollars ($) </option>
-                                <option value="percentage"> In percentage (%) </option>
-                            </select>
-                        <!-- </div> -->
-                        
+                    <div class="input-group-prepend"> 
+                        <select name="tipType" id="tipType">
+                            <option class="dropdown-item" value="dollars"> $ </option>
+                            <option class="dropdown-item" value="percentage"> % </option>
+                        </select>
                     </div>
 
                     <input type="number" name="tip" class="form-control" id="tip" value=<?= $_POST["tip"] ?> placeholder="E.g. 4">
@@ -97,7 +86,6 @@ $app = new Application;
         </div>
 
   </div>
-
 
 <!-- To display the correct Tip Type in dropdown list after form submission -->
 <script>

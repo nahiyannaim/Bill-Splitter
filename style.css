@@ -43,3 +43,8 @@ form h3
     margin-left: 10%;
     font-weight: 400;
 }
+
+.dropdown-item
+{
+    font-size: 1.2rem;
+}
