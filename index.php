@@ -69,12 +69,16 @@ $app = new Application;
 
                     <div class="input-group-prepend">
                         
-                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Type</button>
+                        <!-- <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Type</button> -->
                         
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">In dollars ($)</a>
-                            <a class="dropdown-item" href="#">In percentage (%)</a>
-                        </div>
+                        <!-- <div class="dropdown-menu"> -->
+                            <!-- <a class="dropdown-item" href="#">In dollars ($)</a>
+                            <a class="dropdown-item" href="#">In percentage (%)</a> -->
+                            <select name="tipType" id="tipType">
+                                <option value="dollars"> In dollars ($) </option>
+                                <option value="percentage"> In percentage (%) </option>
+                            </select>
+                        <!-- </div> -->
                         
                     </div>
 
@@ -88,13 +92,17 @@ $app = new Application;
 
         </form>
 
-        
         <div class="result">
             <h3> $<?= $app->compute(true) ?> per person </h3>  
         </div>
 
   </div>
 
+
+<!-- To display the correct Tip Type in dropdown list after form submission -->
+<script>
+    document.getElementById('tipType').value = "<?= $_POST['tipType'];?>";
+</script>
 
 <!-- To disable resubmission of form when refresh is clicked
 <script>
@@ -104,7 +112,6 @@ $app = new Application;
     }
 </script> 
 -->
-
 
 </body>
 

@@ -1,10 +1,11 @@
 <?php
 class Application 
 {
-    public $total; 
-    public $numPeople;
-    public $tax;
-    public $tip;
+    private $total; 
+    private $numPeople;
+    private $tax;
+    private $tip;
+    private $tipType;
 
     function __construct()
     {
@@ -12,15 +13,16 @@ class Application
         $this->numPeople = (double)$_POST["numPeople"];
         $this->tax = (double)$_POST["tax"];
         $this->tip = (double)$_POST["tip"];
+        $this->tipType = $_POST["tipType"];
     }
  
-    function compute($tipIsDollar)
+    function compute()
     {
         $result = 0;
 
         if($this->numPeople > 0) // Avoiding division by zero when form is empty when app is launched
         {
-            if($tipIsDollar)
+            if($this->tipType == 'dollars')
             {
                 $result = ( $this->total * (($this->tax/100) + 1) + $this->tip ) / $this->numPeople ;
             }
