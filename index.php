@@ -1,16 +1,9 @@
 <?php
 
-$total = (double)$_POST["totalBill"];
-$numPeople = (double)$_POST["numPeople"];
-$tax = (double)$_POST["tax"];
-$tip = (double)$_POST["tip"];
-
-if($numPeople > 0) // Avoiding division by zero when form is empty when app is launched
-{
-    $result = ( $total * (($tax/100) + 1) + $tip ) / $numPeople ;
-}
+include 'compute.php';
 
 ?>
+
 
 <!DOCTYPE html>
 
