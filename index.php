@@ -1,6 +1,8 @@
 <?php
 
-include 'compute.php';
+include 'application.php';
+
+$app = new Application; 
 
 ?>
 
@@ -88,7 +90,7 @@ include 'compute.php';
 
         
         <div class="result">
-            <h3> $<?= round($result, 1); ?> per person </h3>  
+            <h3> $<?= $app->compute(true) ?> per person </h3>  
         </div>
 
   </div>
