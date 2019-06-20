@@ -5,7 +5,6 @@ $app = new Application;
 
 ?>
 
-
 <!DOCTYPE html>
 
 <html lang="en">
@@ -88,9 +87,19 @@ $app = new Application;
 
   </div>
 
+
 <!-- To display the correct Tip Type in dropdown list after form submission -->
 <script>
-    document.getElementById('tipType').value = "<?= $_POST['tipType'];?>";
+
+    if("<?= $_POST['tipType'];?>".length > 0) // Length of $_POST['tipType'] > 0 so show the one selected by user
+    {
+        document.getElementById('tipType').value = "<?= $_POST['tipType'];?>";
+    }
+    else // For initial launch of app, show dollars as default in dropdown since $_POST['tipType'] is empty initially 
+    {
+        document.getElementById('tipType').value = "dollars";
+    }
+    
 </script>
 
 <!-- To disable resubmission of form when refresh is clicked
