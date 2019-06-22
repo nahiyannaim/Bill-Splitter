@@ -37,14 +37,20 @@ $app = new Application;
         <form class="form" action="" method="post">
 
             <div class="form-group row">
+
+                <img src="/images/bill.svg" class="bill-img">
                 <h3 for="totalBill" class="col-sm-2 col-form">Total Bill: </h3>
+
                 <div class="col-sm-2">
                     <input type="number" name="totalBill" class="form-control" id="totalBill" value=<?= $_POST["totalBill"] ?> placeholder="$">
                 </div>
             </div>
 
             <div class="form-group row">
+
+                <img src="/images/people.svg" class="people-img">
                 <h3 for="numPeople" class="col-sm-2 col-form"> Number of People: </h3>
+
                 <div class="col-sm-2">
                     <input type="number" name="numPeople" class="form-control" id="numPeople" value=<?= $_POST["numPeople"] ?> placeholder="E.g. 5">
                     <!-- <em>E.g. 5</em> -->
@@ -52,7 +58,10 @@ $app = new Application;
             </div>
 
             <div class="form-group row">
+
+                <img src="/images/tax.svg" class="tax-img">
                 <h3 for="tax" class="col-sm-2 col-form"> Tax Percentage: </h3>
+
                 <div class="col-sm-2">
                     <input type="number" name="tax" class="form-control" id="tax" value=<?= $_POST["tax"] ?> placeholder="E.g. 13 for MB">
                     <!-- <em>E.g. 13 for MB</em> -->
@@ -61,6 +70,7 @@ $app = new Application;
 
             <div class="form-group row">
 
+                <img src="/images/tip.svg" class="tip-img">
                 <h3 for="tip" class="col-sm-2 col-form"> Tip:  </h3>
 
                 <div class="input-group mb-3 col-sm-2">
@@ -77,7 +87,7 @@ $app = new Application;
 
             </div>
         
-            <button type="submit" class="btn btn-primary split-button" > Split </button>
+            <button type="submit" class="btn btn-primary split-button" > <h5> Split </h5> </button>
 
         </form>
 
@@ -110,6 +120,8 @@ $app = new Application;
     }
 </script> 
 -->
+
+<!-- Icons downloaded from: https://fontawesome.com/license/free -->
 
 </body>
 

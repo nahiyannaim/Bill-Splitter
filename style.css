@@ -37,6 +37,13 @@ form h3
     margin-left: 10%;
 }
 
+.split-button h5
+{
+    font-size: 1.6rem;
+    font-weight: 200;
+    letter-spacing: 0.1rem;
+}
+
 .result h3
 {
     margin-top: 2%;
@@ -47,4 +54,26 @@ form h3
 .dropdown-item
 {
     font-size: 1.2rem;
+}
+
+.bill-img
+{
+    width: 2%;
+}
+
+.people-img
+{
+    width: 2%;
+}
+
+.tax-img
+{
+    height: 2%;
+    width: 2%;
+}
+
+.tip-img
+{
+    height: 2%;
+    width: 2%;
 }
