@@ -93,10 +93,13 @@ $app = new Application;
 
         </form>
 
-        <div class="result">
-            <h3> $<?= $app->compute(true) ?> per person </h3>  
-        </div>
 
+        <?php if($app->compute() != 0): ?>
+            <div class="result">
+                <h3> $<?= $app->compute() ?> per person </h3>  
+            </div>
+        <?php endif; ?>
+        
   </div>
 
 
