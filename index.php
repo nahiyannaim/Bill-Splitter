@@ -44,7 +44,7 @@ $app = new Application;
                 <h3 for="totalBill" class="col-sm-2 col-form">Total Bill: </h3>
 
                 <div class="col-sm-2">
-                    <input type="number" name="totalBill" class="form-control" id="totalBill" value=<?= $_POST["totalBill"] ?> placeholder="$">
+                    <input type="number" min="0" name="totalBill" class="form-control" id="totalBill" value=<?= $_POST["totalBill"] ?> placeholder="$">
                 </div>
             </div>
 
@@ -54,7 +54,7 @@ $app = new Application;
                 <h3 for="numPeople" class="col-sm-2 col-form"> Number of People: </h3>
 
                 <div class="col-sm-2">
-                    <input type="number" name="numPeople" class="form-control" id="numPeople" value=<?= $_POST["numPeople"] ?> placeholder="E.g. 5">
+                    <input type="number" min="0" name="numPeople" class="form-control" id="numPeople" value=<?= $_POST["numPeople"] ?> placeholder="E.g. 5">
                     <!-- <em>E.g. 5</em> -->
                 </div>
             </div>
@@ -94,11 +94,11 @@ $app = new Application;
         </form>
 
 
-        <?php if($app->compute() != 0): ?>
+        <?php //if($app->compute() > 0): ?>
             <div class="result">
                 <h3> $<?= $app->compute() ?> per person </h3>  
             </div>
-        <?php endif; ?>
+        <?php //endif; ?>
         
   </div>
 
