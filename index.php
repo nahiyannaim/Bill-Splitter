@@ -54,7 +54,7 @@ $app = new Application;
                 <h3 for="numPeople" class="col-sm-6 col-form"> Number of People: </h3>
 
                 <div class="col-sm-5">
-                    <input type="number" min="0" name="numPeople" class="form-control" id="numPeople" value=<?= $_POST["numPeople"] ?> placeholder="E.g. 5">
+                    <input type="number" min="1" name="numPeople" class="form-control" id="numPeople" value=<?= $_POST["numPeople"] ?> placeholder="E.g. 5">
                     <!-- <em>E.g. 5</em> -->
                 </div>
             </div>
@@ -77,7 +77,7 @@ $app = new Application;
 
                 <div class="input-group mb-3 col-sm-5">
                     <div class="input-group-prepend"> 
-                        <select name="tipType" id="tipType" class="lala">
+                        <select name="tipType" id="tipType" class="currentSelection">
                             <option class="dropdown-item" value="dollars"> $ </option>
                             <option class="dropdown-item" value="percentage"> % </option>
                         </select>
@@ -119,7 +119,7 @@ $app = new Application;
     // To correctly switch between max and min range of input allowed for tip in dollars (0-9999999) and tip in percentage (0-100)
     $(function() 
     {
-        $('.lala').change(function() 
+        $('.currentSelection').change(function() 
         {
             if($(this).val() === 'dollars')
             {
