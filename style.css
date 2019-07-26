@@ -2,10 +2,15 @@
 {
     margin-top: 2%;
     margin-left: 36%;
+    width: 25%;
+    height: 75%;
+    box-shadow: 0 10px 12px 0 rgba(0,0,0,0.2);
+    padding-left: 5%;
 }
 
 .header
 {
+    padding-top: 3%;
     color: rgba(1, 77, 219, 0.966);
     margin-bottom: 5%;
 }
@@ -17,24 +22,24 @@
 
 .header h1
 {
-    margin-left: 11.25%;
+    margin-left: 22%;
 }
 
 .header p
 {
-    margin-left: 10%;
+    margin-left: 17%;
 }
 
 form h3
 {
-    /* text-align: right; */
+    margin-left: 0%;
     font-weight: 400;
 }
 
 .split-button
 {
-    width: 10%;
-    margin-left: 10%;
+    width: 25%;
+    margin-left: 24%;
 }
 
 .split-button h5
@@ -46,8 +51,9 @@ form h3
 
 .result h3
 {
-    margin-top: 2%;
-    margin-left: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 20%;
     font-weight: 400;
 }
 
@@ -58,22 +64,26 @@ form h3
 
 .bill-img
 {
-    width: 2%;
+    margin-left: -8%;
+    width: 5%;
 }
 
 .people-img
 {
-    width: 2%;
+    margin-left: -8%;
+    width: 5%;
 }
 
 .tax-img
 {
+    margin-left: -8%;
     height: 2%;
-    width: 2%;
+    width: 5%;
 }
 
 .tip-img
 {
+    margin-left: -8%;
     height: 2%;
-    width: 2%;
+    width: 5%;
 }
