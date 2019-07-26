@@ -89,7 +89,7 @@ $app = new Application;
 
             </div>
         
-            <button type="submit" class="btn btn-primary split-button" > <h5> Split </h5> </button>
+            <button type="submit" class="btn btn-danger split-button" > <h5> Split </h5> </button>
 
         </form>
 
