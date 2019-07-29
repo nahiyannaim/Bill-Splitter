@@ -41,9 +41,9 @@ $app = new Application;
             <div class="form-group row">
 
                 <img src="/images/bill.svg" class="bill-img">
-                <h3 for="totalBill" class="col-sm-6 col-form">Total Bill: </h3>
+                <h3 for="totalBill" class="col-sm-5 col-form">Total Bill: </h3>
 
-                <div class="col-sm-5">
+                <div class="col-sm-4">
                     <input type="number" min="0" name="totalBill" class="form-control" id="totalBill" value=<?= $_POST["totalBill"] ?> placeholder="$">
                 </div>
             </div>
@@ -51,9 +51,9 @@ $app = new Application;
             <div class="form-group row">
 
                 <img src="/images/people.svg" class="people-img">
-                <h3 for="numPeople" class="col-sm-6 col-form"> Number of People: </h3>
+                <h3 for="numPeople" class="col-sm-5 col-form"> Number of People: </h3>
 
-                <div class="col-sm-5">
+                <div class="col-sm-4">
                     <input type="number" min="1" name="numPeople" class="form-control" id="numPeople" value=<?= $_POST["numPeople"] ?> placeholder="E.g. 5">
                     <!-- <em>E.g. 5</em> -->
                 </div>
@@ -62,9 +62,9 @@ $app = new Application;
             <div class="form-group row">
 
                 <img src="/images/tax.svg" class="tax-img">
-                <h3 for="tax" class="col-sm-6 col-form"> Tax Percentage: </h3>
+                <h3 for="tax" class="col-sm-5 col-form"> Tax Percentage: </h3>
 
-                <div class="col-sm-5">
+                <div class="col-sm-4">
                     <input type="number" min="0" max="100" name="tax" class="form-control" id="tax" value=<?= $_POST["tax"] ?> placeholder="E.g. 13 for MB">
                     <!-- <em>E.g. 13 for MB</em> -->
                 </div>
@@ -73,9 +73,9 @@ $app = new Application;
             <div class="form-group row">
 
                 <img src="/images/tip.svg" class="tip-img">
-                <h3 for="tip" class="col-sm-6 col-form"> Tip:  </h3>
+                <h3 for="tip" class="col-sm-5 col-form"> Tip:  </h3>
 
-                <div class="input-group mb-3 col-sm-5">
+                <div class="input-group mb-3 col-sm-4">
                     <div class="input-group-prepend"> 
                         <select name="tipType" id="tipType" class="currentSelection">
                             <option class="dropdown-item" value="dollars"> $ </option>
