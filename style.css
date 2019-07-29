@@ -11,7 +11,7 @@
     margin-left: 36%;
     padding-left: 5%;
     width: 25%;
-    height: 75%;
+    height: auto;
 }
 
 .header
@@ -92,4 +92,43 @@ form h3
     margin-left: -8%;
     height: 2%;
     width: 5%;
+}
+
+#totalBill 
+{
+    border-radius: 45px;
+}
+
+#numPeople 
+{
+    border-radius: 45px;
+}
+
+#tax 
+{
+    border-radius: 45px;
+}
+
+#tip 
+{
+    border-top-right-radius: 45px;
+    border-bottom-right-radius: 45px;
+}
+
+#tipType 
+{
+    border-top-left-radius: 45px;
+    border-bottom-left-radius: 45px;
+    margin-left: 0px;
+}
+
+.currentSelection
+{
+    margin-left: 5px;
+    font-size: 1.3rem;
+}
+
+.currentSelection:hover
+{
+    cursor: pointer;
 }
