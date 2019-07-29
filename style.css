@@ -44,8 +44,9 @@ form h3
 
 .split-button
 {
-    width: 25%;
-    margin-left: 24%;
+    position: inherit;
+    width: 130px;
+    margin-left: 26%;
 }
 
 .split-button h5
@@ -61,6 +62,18 @@ form h3
     margin-bottom: 5%;
     margin-left: 20%;
     font-weight: 400;
+}
+
+.result span
+{
+    position: inherit;
+    margin-left: -8%; 
+    width: 250px;
+    height: 40px;
+    border-radius: 45px;
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: white;
 }
 
 .dropdown-item
@@ -132,3 +145,5 @@ form h3
 {
     cursor: pointer;
 }
+
+
