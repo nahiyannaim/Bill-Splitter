@@ -42,6 +42,11 @@ form h3
     font-weight: 400;
 }
 
+input
+{
+    text-align: center;
+}
+
 .split-button
 {
     position: inherit;
@@ -109,21 +114,25 @@ form h3
 
 #totalBill 
 {
+    /* font-size: 1.2rem; */
     border-radius: 45px;
 }
 
 #numPeople 
 {
+    /* font-size: 1.2rem; */
     border-radius: 45px;
 }
 
 #tax 
 {
+    /* font-size: 1.2rem; */
     border-radius: 45px;
 }
 
 #tip 
 {
+    /* font-size: 1.2rem; */
     border-top-right-radius: 45px;
     border-bottom-right-radius: 45px;
 }
@@ -145,5 +154,6 @@ form h3
 {
     cursor: pointer;
 }
+
 
 
