@@ -1,163 +1,144 @@
-body
-{
-    display: grid;
-    align-items: center;
-    justify-content: center;
+body {
+  display: grid;
+  align-items: center;
+  justify-content: center;
 }
 
+.main {
+  background: radial-gradient(
+      circle at top left,
+      rgb(255, 255, 255),
+      rgba(255, 255, 255, 0)
+    ),
+    radial-gradient(
+      circle at bottom left,
+      rgba(124, 223, 253, 0.842),
+      rgba(255, 255, 255, 0)
+    );
 
-.main
-{
-    background: 
-        radial-gradient(circle at top left, rgb(255, 255, 255), rgba(255,255,255,0)),
-        radial-gradient(circle at bottom left, rgba(124, 223, 253, 0.842), rgba(255,255,255,0));
-
-    border: 1px solid rgba(200, 200, 200, 1);
-    border-radius: 12px;
-    box-shadow: 0 4px 6px 4px rgba(161, 161, 161, 0.4);
-    margin-top: 2%;
+  border: 1px solid rgba(200, 200, 200, 1);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px 4px rgba(161, 161, 161, 0.4);
+  margin-top: 2%;
 }
 
-.header
-{
-    padding-top: 3%;
-    color: rgba(1, 77, 219, 0.966);
-    margin-bottom: 5%;
+.header {
+  padding-top: 3%;
+  color: rgba(1, 77, 219, 0.966);
+  margin-bottom: 5%;
 }
 
-.header a:hover
-{
-    text-decoration: none; 
+.header a:hover {
+  text-decoration: none;
 }
 
-.header h1
-{
-    margin-left: 39%;
+.header h1 {
+  margin-left: 39%;
 }
 
-.header p
-{
-    margin-left: 35%;
+.header p {
+  margin-left: 35%;
 }
 
-form h3
-{
-    margin-left: 0%;
-    font-weight: 400;
+form h3 {
+  margin-left: 0%;
+  font-weight: 400;
 }
 
-input
-{
-    text-align: center;
+input {
+  text-align: center;
 }
 
-.split-button
-{
-    position: inherit;
-    width: 130px;
-    margin-left: 40%;
+.split-button {
+  position: inherit;
+  width: 130px;
+  margin-left: 40%;
 }
 
-.split-button h5
-{
-    font-size: 1.6rem;
-    font-weight: 200;
-    letter-spacing: 0.1rem;
+.split-button h5 {
+  font-size: 1.6rem;
+  font-weight: 200;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  margin-top: 6%;
 }
 
-.result h3
-{
-    margin-top: 5%;
-    margin-bottom: 5%;
-    margin-left: 36%;
-    font-weight: 400;
+.result h3 {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: 36%;
+  font-weight: 400;
 }
 
-.result span
-{
-    position: inherit;
-    margin-left: -8%; 
-    width: 250px;
-    height: 40px;
-    border-radius: 45px;
-    font-weight: 400;
-    font-size: 1.6rem;
-    color: white;
+.result span {
+  position: inherit;
+  margin-left: -8%;
+  width: 250px;
+  height: 40px;
+  border-radius: 45px;
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: white;
 }
 
-.dropdown-item
-{
-    font-size: 1.2rem;
+.dropdown-item {
+  font-size: 1.2rem;
 }
 
-.bill-img
-{
-    margin-left: 11%;
-    width: 5%;
+.bill-img {
+  margin-left: 11%;
+  width: 5%;
 }
 
-.people-img
-{
-    margin-left: 11%;
-    width: 5%;
+.people-img {
+  margin-left: 11%;
+  width: 5%;
 }
 
-.tax-img
-{
-    margin-left: 11%;
-    height: 2%;
-    width: 5%;
+.tax-img {
+  margin-left: 11%;
+  height: 2%;
+  width: 5%;
 }
 
-.tip-img
-{
-    margin-left: 11%;
-    height: 2%;
-    width: 5%;
+.tip-img {
+  margin-left: 11%;
+  height: 2%;
+  width: 5%;
 }
 
-#totalBill 
-{
-    /* font-size: 1.2rem; */
-    border-radius: 45px;
+#totalBill {
+  font-size: 1.4rem;
+  border-radius: 45px;
 }
 
-#numPeople 
-{
-    /* font-size: 1.2rem; */
-    border-radius: 45px;
+#numPeople {
+  font-size: 1.4rem;
+  border-radius: 45px;
 }
 
-#tax 
-{
-    /* font-size: 1.2rem; */
-    border-radius: 45px;
+#tax {
+  font-size: 1.4rem;
+  border-radius: 45px;
 }
 
-#tip 
-{
-    /* font-size: 1.2rem; */
-    border-top-right-radius: 45px;
-    border-bottom-right-radius: 45px;
+#tip {
+  font-size: 1.4rem;
+  border-top-right-radius: 45px;
+  border-bottom-right-radius: 45px;
 }
 
-#tipType 
-{
-    border-top-left-radius: 45px;
-    border-bottom-left-radius: 45px;
-    margin-left: 0px;
+#tipType {
+  border-top-left-radius: 45px;
+  border-bottom-left-radius: 45px;
+  margin-left: 0px;
 }
 
-.currentSelection
-{
-    margin-left: 5px;
-    font-size: 1.3rem;
+.currentSelection {
+  margin-left: 5px;
+  font-size: 1.3rem;
 }
 
-.currentSelection:hover
-{
-    cursor: pointer;
+.currentSelection:hover {
+  cursor: pointer;
 }
-
-
-
